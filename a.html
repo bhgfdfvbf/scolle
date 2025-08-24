@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist Concours 2025/2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #1f1f1f;
+    }
+    tr:nth-child(even) {
+      background-color: #1e1e1e;
+    }
+    a {
+      color: #4da6ff;
+    }
+    .controls {
+      margin-bottom: 15px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 5px 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    input[type="text"] {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h2>Checklist Concours et Inscriptions 2025/2026</h2>
+
+  <div class="controls">
+    <button onclick="toggleAll(true)">Tout cocher</button>
+    <button onclick="toggleAll(false)">Tout décocher</button>
+    <button onclick="hideCompleted()">Cacher cochés</button>
+    <input type="text" id="search" placeholder="Rechercher..." onkeyup="searchTable()">
+  </div>
+
+  <table id="checklist">
+    <tr>
+      <th>✔</th>
+      <th>Établissement / Formation</th>
+      <th>Dernier délai</th>
+      <th>Lien</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>ENSA Khouribga (Cycle Ingénieur)</td>
+      <td>24 août 2025</td>
+      <td><a href="https://ensak.usms.ac.ma/Preinscription" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>ENSA Marrakech (Accès Parallèle)</td>
+      <td>25 août 2025 (12h00)</td>
+      <td><a href="https://ensapp.uca.ma/ap_inscription.php" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>FST Settat (Cycle Ingénieur)</td>
+      <td>25 août 2025</td>
+      <td><a href="https://fst-scolagile.uh1.ac.ma/#/public/registration-etape1" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>FST Tanger (Cycle Ingénieur)</td>
+      <td>25 août 2025</td>
+      <td><a href="https://cing1-fstt.uae.ac.ma/cing" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>FST Mohammedia (Cycle Ingénieur)</td>
+      <td>31 août 2025</td>
+      <td><a href="https://e-candidature.fstm.ac.ma/" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>FP Khouribga (Licence SIIA)</td>
+      <td>31 août 2025</td>
+      <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScLvr6gfGZxKgSGo62H9qdhhMAWSqKwRYebFCMZu69WOk6nBA/viewform" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Licence d’Excellence – FS Ben M’Sik Casablanca</td>
+      <td>01 septembre 2025</td>
+      <td><a href="https://www.fsb.univh2c.ma/licenceexcellence/" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Préinscription en 3ème année du cycle Licence Sciences et Techniques</td>
+      <td>03 septembre 2025</td>
+      <td><a href="https://f.fst-usmba.ac.ma/preinsc/APP/LST2/PREINSCRIPTION" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>EST Casablanca (Bachelor)</td>
+      <td>05 septembre 2025</td>
+      <td><a href="https://ecandidaturefi.estc.ma/fi/" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>FST Errachidia (Cycle Ingénieur)</td>
+      <td>07 septembre 2025</td>
+      <td><a href="https://candidature.umi.ac.ma" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Faculté Polydisciplinaire de Sidi Bennour (Licences)</td>
+      <td>10 septembre 2025</td>
+      <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeMSaNtsxAVRGjkqtrU1qUAw66_kKAQo4etVAcbqMz7EXZN0Q/viewform" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>EST Essaouira (Bachelor)</td>
+      <td>12 septembre 2025</td>
+      <td><a href="https://app-este.uca.ma/bachelor/" target="_blank">Lien</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>EST Salé (Bachelor)</td>
+      <td>12 septembre 2025</td>
+      <td><a href="https://preins.um5.ac.ma" target="_blank">Lien</a></td>
+    </tr>
+  </table>
+
+  <script>
+    // حفظ حالة الخانات
+    function saveState() {
+      const states = [];
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach((cb, i) => {
+        states[i] = cb.checked;
+      });
+      localStorage.setItem("checklistStates", JSON.stringify(states));
+    }
+
+    // استرجاع الحالة عند فتح الصفحة
+    function loadState() {
+      const saved = JSON.parse(localStorage.getItem("checklistStates") || "[]");
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach((cb, i) => {
+        if (saved[i] !== undefined) cb.checked = saved[i];
+      });
+    }
+
+    function toggleAll(state) {
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach(cb => {
+        cb.checked = state;
+      });
+      saveState();
+    }
+
+    function hideCompleted() {
+      document.querySelectorAll('#checklist tr').forEach(row => {
+        const cb = row.querySelector('input[type="checkbox"]');
+        if (cb && cb.checked) row.style.display = 'none';
+      });
+    }
+
+    function searchTable() {
+      const filter = document.getElementById("search").value.toLowerCase();
+      document.querySelectorAll('#checklist tr').forEach((row, i) => {
+        if (i === 0) return;
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+      });
+    }
+
+    // كل تغيير يتسجل
+    document.addEventListener("DOMContentLoaded", () => {
+      loadState();
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener("change", saveState);
+      });
+    });
+  </script>
+</body>
+</html>
